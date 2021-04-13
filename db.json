@@ -1,27 +1,17 @@
 {
-    "chocolat": [
-      {
-        "id": 1,
-        "nom": "Delice",
-        "description": "chocolat noix de coco"
-      },
-      {
-        "id": 3,
-        "nom": "Prallline",
-        "description": "chocolat praline"
-      }
-    ],
-    "fabrication": [
-      {
-        "id": 1,
-        "createur": "Olivia",
-        "prix": "2",
-        "chocolatId": 1
-      },
-      {
-        "id": 5,
-        "createur": "Sandrine",
-        "prix": "4"
-      }
-    ]
-  }
+  "chocolat": [
+    {
+      "id": 3,
+      "nom": "Prallline",
+      "description": "chocolat praline"
+    }
+  ],
+  "fabrication": [
+    {
+      "id": 1,
+      "createur": "Olivia",
+      "prix": "2",
+      "chocolatId": 1
+    }
+  ]
+}

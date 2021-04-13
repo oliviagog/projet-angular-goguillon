@@ -1,6 +1,6 @@
 {
   "name": "projet-angular-goguillon",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,7 +21,8 @@
     "@angular/router": "~11.2.8",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.3"
+    "zone.js": "~0.11.3",
+    "json-server": "^0.16.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.7",
