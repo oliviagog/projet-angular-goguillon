@@ -4,12 +4,23 @@
       "id": 3,
       "nom": "Prallline",
       "description": "chocolat praline"
+    },
+    {
+      "nom": "Caramel",
+      "description": "chocolat blanc carame",
+      "id": 4
     }
   ],
   "fabrication": [
     {
       "id": 1,
       "createur": "Olivia",
+      "prix": "2",
+      "chocolatId": 1
+    },
+    {
+      "id": 7,
+      "createur": "Reynald",
       "prix": "2",
       "chocolatId": 1
     }
