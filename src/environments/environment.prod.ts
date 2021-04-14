@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  studentEndPoint:"https://chocolatier-api.herokuapp.com/",
 };
