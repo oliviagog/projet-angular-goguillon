@@ -8,19 +8,25 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
 import {CoreModule} from './core/core.module';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+
+import { FabricationModule } from './fabrication/fabrication.module';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent,
+  
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule,
-    MatToolbarModule,
-    MatIconModule,
     CoreModule,
+  
+    
+    
   ],
   
   providers: [],
