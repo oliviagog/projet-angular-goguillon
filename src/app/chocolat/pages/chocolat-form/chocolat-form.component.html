@@ -1,1 +1,38 @@
-<p>chocolat-form works!</p>
+<body>
+<form [formGroup]="chocolatForm" (ngSubmit)="onSubmit(chocolatForm.value)">
+    <div class="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Nom :</mat-label>
+        <input
+          matInput
+          formControlName="nom"
+          type="text"
+        />
+      </mat-form-field>
+    </div>
+  
+    <div class="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Description :</mat-label>
+        <input
+          matInput
+          formControlName="description"
+          type="text"
+        />
+      </mat-form-field>
+    </div>
+  
+    
+  
+    {{chocolatForm.valid}}
+  
+    <button mat-raised-button color="accent" [disabled]="!chocolatForm.valid">
+        <mat-icon>add</mat-icon>
+        Ajout
+      </button>
+  
+     
+  
+  </form>
+
+  </body>

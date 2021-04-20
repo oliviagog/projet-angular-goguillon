@@ -1,28 +1,38 @@
-
+<body>
     <h1>Voici tous les chocolats possible dans notre boutique !</h1>
 
-    <table mat-table [dataSource]="chocolats$">
+    <table mat-table [dataSource]="chocolats$" multiTemplateDataRows
+    class="mat-elevation-z8">>
         <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef>id</th>
-          <td mat-cell *matCellDef="let student"> {{chocolat.id}} </td>
+          <th mat-header-cell *matHeaderCellDef>Id</th>
+          <td mat-cell *matCellDef="let chocolats$"> {{chocolats$.id}} </td>
         </ng-container>
-        <ng-container matColumnDef="firstName">
+
+        <ng-container matColumnDef="nom">
           <th mat-header-cell *matHeaderCellDef>Nom</th>
-          <td mat-cell *matCellDef="let student"> {{chocolat.nom}} </td>
+          <td mat-cell *matCellDef="let chocolats$"> {{chocolats$.nom}} </td>
         </ng-container>
-        <ng-container matColumnDef="lastName">
-          <th mat-header-cell *matHeaderCellDef>Description</th>
-          <td mat-cell *matCellDef="let student"> {{chocolat.description}} </td>
-        </ng-container>
-    
         
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef>Description</th>
+          <td mat-cell *matCellDef="let chocolats$"> {{chocolats$.description}} </td>
+        </ng-container>
+       
         <ng-container matColumnDef="delete">
-            <th mat-header-cell *matHeaderCellDef> Supprimer </th>
-            <td mat-cell *matCellDef="let student" (click)=deleteOne(student.id)> Delete </td>
-          </ng-container>
+          <th mat-header-cell *matHeaderCellDef> Delete </th>
+          <td mat-cell *matCellDef="let chocolats$" (click)=deleteOne(chocolats$.id)> ❌ </td>
+        </ng-container>
 
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
+</table>
+
+<button mat-button color="primary" (click)="goToForm()">
+  <mat-icon>add</mat-icon>
+</button>
+</body>
 
 
+
+  

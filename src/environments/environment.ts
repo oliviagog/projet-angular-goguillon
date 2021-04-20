@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  chocolatEndPoint:"https://chocolatier-api.herokuapp.com/",
+  EndPoint:"https://chocolatier-api.herokuapp.com/",
 };
 /*
  * For easier debugging in development mode, you can import the following file

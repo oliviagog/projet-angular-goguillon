@@ -4,6 +4,8 @@ import {HeaderComponent} from './components/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
+import { ChocolatService } from './services/http/chocolat.service';
+import { FabricationService } from './services/http/fabrication.service';
 @NgModule({
   declarations: [HeaderComponent],
   imports: [
@@ -14,8 +16,13 @@ import {MatIconModule} from '@angular/material/icon';
   ],
   exports:[
     HeaderComponent,
+  
 
     
+  ],
+  providers:[
+    ChocolatService,
+    FabricationService
   ]
 })
 export class CoreModule { }

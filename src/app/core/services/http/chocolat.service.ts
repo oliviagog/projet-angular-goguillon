@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class ChocolatService {
 
-  endpoint: string = environment.chocolatEndPoint;
+  endpoint: string = environment.EndPoint;
 
 
   constructor(private _httpClient: HttpClient) {
@@ -14,11 +14,16 @@ export class ChocolatService {
   }
 
   get(): Observable<Chocolat[]> {
-    return this._httpClient.get<Chocolat[]>(this.endpoint);
+    return this._httpClient.get<Chocolat[]>(this.endpoint+"chocolat");
   }
 
   deleteOne(id): Observable<Chocolat>{
-    return this._httpClient.delete<Chocolat>(this.endpoint+"/"+id)
+    return this._httpClient.delete<Chocolat>(this.endpoint+"chocolat/"+id)
+  }
+
+  post(chocolat: Chocolat): Observable<Chocolat> {
+    return this._httpClient.post<Chocolat>(this.endpoint +"chocolat/", chocolat);
+
   }
 
 }
