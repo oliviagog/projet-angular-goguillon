@@ -11,6 +11,7 @@ import { ChocolatService } from 'src/app/core/services/http/chocolat.service';
 })
 export class ChocolatFormComponent implements OnInit {
   chocolatForm: FormGroup;
+ 
 
   constructor(private fb: FormBuilder, private _chocolatService: ChocolatService, private _route: Router) {
     this.chocolatForm = this.fb.group({
