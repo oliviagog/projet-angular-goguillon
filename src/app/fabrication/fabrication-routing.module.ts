@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from '../shared/components/not-found/not-found.component';
 import { FabricationComponent } from './fabrication.component';
+import { FabricationFormComponent } from './pages/fabrication-form/fabrication-form.component';
 import { FabricationListComponent } from './pages/fabrication-list/fabrication-list.component';
 
 const routes: Routes = [
@@ -14,11 +15,15 @@ const routes: Routes = [
         component: FabricationListComponent,
       },
       {
-        path:'**',
-        component:NotFoundComponent,
-      }
+        path:'fabrication-form',
+        component: FabricationFormComponent,
+      },
     ]
-  }
+  },
+  {
+    path:'**',
+    component:NotFoundComponent,
+  },
 ];
 
 @NgModule({
