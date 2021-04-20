@@ -1,1 +1,49 @@
-<p>fabrication-form works!</p>
+<body>
+    <h1>Ajouter un renseignement</h1>
+    <form [formGroup]="fabricationForm" (ngSubmit)="onSubmit(fabricationForm.value)">
+        <div class="form">
+          <mat-form-field appearance="fill">
+            <mat-label>Créateur :</mat-label>
+            <input
+              matInput
+              formControlName="createur"
+              type="text"
+            />
+          </mat-form-field>
+        </div>
+      
+        <div class="form">
+          <mat-form-field appearance="fill">
+            <mat-label>Prix :</mat-label>
+            <input
+              matInput
+              formControlName="prix"
+              type="number"
+            />
+          </mat-form-field>
+        </div>
+
+        <div class="form">
+          <mat-form-field appearance="fill">
+            <mat-label>ChocolatID :</mat-label>
+            <input
+              matInput
+              formControlName="chocolatid"
+              type="number"
+            />
+          </mat-form-field>
+        </div>     
+      
+        {{fabricationForm.valid}}
+      
+        <button mat-raised-button color="accent" [disabled]="!fabricationForm.valid">
+            <mat-icon>add</mat-icon>
+            Ajout
+          </button>
+      
+         
+      
+      </form>
+    
+      </body>
+    
