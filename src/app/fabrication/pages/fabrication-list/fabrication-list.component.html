@@ -1,3 +1,40 @@
 <body>
     <h1>Pour plus de renseignements c'est ici !</h1>
+
     
+    <table mat-table [dataSource]="fabrications$" multiTemplateDataRows
+    class="mat-elevation-z8">>
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>Id</th>
+          <td mat-cell *matCellDef="let fabrications$"> {{fabrications$.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nom">
+          <th mat-header-cell *matHeaderCellDef>Nom</th>
+          <td mat-cell *matCellDef="let chocolats$"> {{chocolats$.nom}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef>Description</th>
+          <td mat-cell *matCellDef="let chocolats$"> {{chocolats$.description}} </td>
+        </ng-container>
+       
+        <ng-container matColumnDef="delete">
+          <th mat-header-cell *matHeaderCellDef> Delete </th>
+          <td mat-cell *matCellDef="let chocolats$" (click)=deleteOne(chocolats$.id)> ❌</td>
+        </ng-container>
+
+        <ng-container matColumnDef="update">
+          <th mat-header-cell *matHeaderCellDef> Update </th>
+          <td mat-cell *matCellDef="let chocolats$" (click)=deleteOne(chocolats$.id)> ✏️ </td>
+        </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
+<button mat-button color="primary" (click)="goToForm()">
+  <mat-icon>add</mat-icon>
+</button>
+</body>

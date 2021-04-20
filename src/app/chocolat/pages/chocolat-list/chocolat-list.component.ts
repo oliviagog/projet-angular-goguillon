@@ -10,7 +10,7 @@ import {ChocolatService} from 'src/app/core/services/http/chocolat.service';
 })
 export class ChocolatListComponent implements OnInit {
   chocolats$: Observable<Chocolat[]>;
-  displayedColumns: string[] = ["id","nom","description", "delete"];
+  displayedColumns: string[] = ["id","nom","description", "delete", "update"];
   constructor(private _chocolatService: ChocolatService, private _route:Router) { }
 
   ngOnInit(): void {
