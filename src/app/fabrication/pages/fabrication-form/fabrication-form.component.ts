@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Chocolat } from 'src/app/core/models/chocolat';
 import { Fabrication } from 'src/app/core/models/fabrication';
 import { FabricationService } from 'src/app/core/services/http/fabrication.service';
 
@@ -12,13 +14,15 @@ import { FabricationService } from 'src/app/core/services/http/fabrication.servi
 export class FabricationFormComponent implements OnInit {
 
   fabricationForm: FormGroup;
- 
+  id: number = null;
+  idchocolat: number;
+  chocolat: Observable<Chocolat[]>;
 
   constructor(private fb: FormBuilder, private _fabricationService: FabricationService, private _route: Router) {
     this.fabricationForm = this.fb.group({
       createur: ['', [Validators.required, this.noWhitespaceValidator]],
       prix: ['', [Validators.required, this.noWhitespaceValidator]],
-      chocolatid: ['', [Validators.required, this.noWhitespaceValidator]],
+      idchocolat: [this.idchocolat],
     })
    }
 
