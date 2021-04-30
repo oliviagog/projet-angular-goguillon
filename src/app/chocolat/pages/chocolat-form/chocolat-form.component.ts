@@ -17,7 +17,7 @@ export class ChocolatFormComponent implements OnInit {
     this.chocolatForm = this.fb.group({
       nom: ['', [Validators.required, this.noWhitespaceValidator]],
       description: ['', [Validators.required, this.noWhitespaceValidator]],
-      idchocolat: [''],
+
     })
    }
 

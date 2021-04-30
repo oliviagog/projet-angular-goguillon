@@ -28,4 +28,10 @@ export class ChocolatListComponent implements OnInit {
   goToForm() {
     this._route.navigateByUrl("/chocolat/chocolat-form");
   }
+  
+  put(id){
+    console.log("chocolat: "+id);
+    this._route.navigateByUrl("/chocolat/chocolat-form/"+id);
+  }
+
 }

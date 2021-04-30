@@ -22,7 +22,7 @@ export class FabricationFormComponent implements OnInit {
     this.fabricationForm = this.fb.group({
       createur: ['', [Validators.required, this.noWhitespaceValidator]],
       prix: ['', [Validators.required, this.noWhitespaceValidator]],
-      idchocolat: [this.idchocolat],
+      idchocolat: ['', [Validators.required, this.noWhitespaceValidator]],
     })
    }
 
